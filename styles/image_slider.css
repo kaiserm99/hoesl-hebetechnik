@@ -1,0 +1,153 @@
+:root {
+  --navbar-color: #0001a1;
+  --link-f-color: #f2f2f2
+}
+
+.main-content {
+  position: relative;
+  width: 60%;
+  display: flex;
+  padding-top: 13vh;
+  margin: 0 auto;
+  flex-direction: column;
+  max-width: 1280px; /* Set to Picture width */
+  z-index: 0;
+}
+
+
+.image-container {
+  position: relative;
+  margin-top: 3rem;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border: 5px solid rgb(24, 24, 24);
+  border-radius: 1em;
+  -webkit-box-shadow: 5px 5px 15px 2px #000000; 
+  box-shadow: 5px 5px 15px 2px #000000;
+}
+
+.controlButtons {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+#prevButton {
+  left: -5em;
+}
+
+#prevButton.active {
+  left: 1em;
+}
+
+#nextButton {
+  right: -5em;
+}
+
+#nextButton.active {
+  right: 1em;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slides img {
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Style the Button which are used to navigate trough the slideshow */
+.button-slide {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button-slide button {
+  position: relative;
+  background-color: transparent;
+  padding: 0.43rem 0.43rem;
+  margin-right: 1rem;
+  border-radius: 100%;
+  border: 0.2em solid white;
+  cursor: pointer;
+}
+
+
+
+/* ALL ANIMATIONS: */
+@keyframes text-out-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes text-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes text-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes text-out-left {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes text-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes text-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

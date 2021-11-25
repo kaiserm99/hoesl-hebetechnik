@@ -1,0 +1,355 @@
+:root {
+    --navbar-color: #0001a1;
+    --logo-color-blue : #0100fc;
+    --link-f-color: #f2f2f2;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.825rem;
+  padding-bottom: 200vh;
+  background: rgb(1,0,103);
+  background: linear-gradient(275deg, rgba(1,0,103,1) 0%, rgba(1,0,140,1) 70%, rgba(1,0,170,1) 100%);
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 1vw;
+  -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.3); 
+  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.3);
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+
+.navbar.sticky {
+  padding: 0.5vh 0.5vw;
+  background:rgb(22, 22, 22);
+}
+
+.nav-links {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  list-style-type: none;
+  transition: 0.4s;
+}
+
+.nav-link {
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: white;
+  text-decoration: none;
+}
+
+#nav-contact {
+  background: black;
+  padding: 2vh 1vw;
+}
+
+#nav-contact.sticky {
+  background: rgba(1,0,170,1);
+}
+
+
+/* For styling the search bar of the navbar*/
+
+.nav-search {
+  position: relative;
+  width: 25%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+#nav-search-form {
+  position: relative;
+  padding: 1.5vh 0.75vw;
+  border-radius: 1em;
+  font-size: 1.75em;
+  border: 4px solid rgb(24, 24, 24);
+  border-radius: 3em;
+  width: 2.8em;
+  height: 2.8em;
+  transition: .4s;
+}
+
+#search-icon {
+  position: absolute;
+  right: 1.1em;
+  height: 3.2em;
+  transition: .1s;
+  z-index: 1;
+}
+
+#search-stop {
+  position: absolute;
+  right: 1.1em;
+  height: 3.2em;
+  transform: translateX(10em);
+  transition: .4s;
+  z-index: 1;
+}
+
+
+#logo {
+  width: 20%;
+}
+
+#logo img {
+  
+}
+
+@media (max-width:1620px) {
+  #logo {
+    width: 15%;
+  }
+
+  #logo img {
+    width: 100%;
+  }
+  
+  .nav-links {
+    width: 55%;
+    transform: translateX(7%);
+  }
+
+  .nav-link {
+    font-size: 1.6em;
+  }
+
+  .nav-search {
+    width: 25%;
+  }
+
+  #nav-search-form {
+    width: 2.8em;
+    height: 2.8em;
+    font-size: 1.4em;
+  }
+
+  #search-icon {
+    right: 0.8em;
+    height: 2.5em;
+  }
+
+  #search-stop {
+    right: 0.8em;
+    height: 2.5em;
+  }
+
+}
+
+
+@media (max-width:1320px) {
+
+  #logo {
+    width: 20%;
+  }
+
+
+  .nav-links {
+    width: 50%;
+    transform: translateX(12%);
+  }
+
+  #nav-search-form {
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  #search-icon {
+    height: 2.2em;
+  }
+
+  #search-stop {
+    height: 2.2em;
+  }
+
+  .nav-link {
+    font-size: 1.4em;
+  }
+
+  .nav-search {
+    width: 25%;
+  }
+}
+
+
+@media (max-width:1120px) {
+
+  #logo {
+    width: 25%;
+  }
+
+  .nav-links {
+    transform: translateX(18%);
+  }
+
+  .nav-search {
+    width: 30%;
+    padding-left: 1em;
+  }
+
+  #nav-search-form {
+    width: 2.2em;
+    height: 2.2em;
+  }
+
+  #search-icon {
+    height: 1.8em;
+  }
+
+  #search-stop {
+    height: 1.8em;
+  }
+}
+
+
+
+@media (max-width:1020px) {
+
+  #logo {
+    width: 25%;
+  }
+
+  .navbar {
+    height: 10vh;
+  }
+
+  .nav-links {
+    position: fixed;
+    right: -100%;
+    top: calc(10vh + 6px);
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.3); 
+    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.3);
+    background: rgb(1,0,103);
+    background: linear-gradient(275deg, rgba(1,0,103,1) 0%, rgba(1,0,140,1) 100%);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    padding: 1.45em 0;
+  }
+
+  .nav-link {
+    font-size: 1.45em;
+  }
+
+  .navbar.sticky {
+    padding: 0;
+    background:rgb(22, 22, 22);
+  }
+
+
+  #nav-contact {
+    padding: 0;
+    background: none;
+  }
+  
+  #nav-contact.sticky {
+    background: none;
+  }
+
+  .nav-search {
+    opacity: 0;
+  }
+
+  /* Copied burger code for the opening of the navbar */
+
+  .menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5em;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-16px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(16px);
+  }
+  /* ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+
+}
+
+
+@media (max-width:750px) {
+  #logo {
+    width: 35%;
+  }
+
+  .nav-links {
+    width: 60%;
+  }
+}
+
+
+@media (max-width:550px) {
+  #logo {
+    width: 40%;
+  }
+}
+
+@media (max-width:400px) {
+  #logo {
+    width: 45%;
+  }
+}
