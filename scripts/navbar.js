@@ -93,6 +93,18 @@ $(document).scroll( function() {
     $("#up-arrow img").removeClass("active");
   }
 
+  /*
+  var top_of_element = $("footer").offset().top;
+  var bottom_of_element = $("footer").offset().top + $("footer").outerHeight();
+  var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+  var top_of_screen = $(window).scrollTop();
+
+  if ((bottom_of_screen > top_of_element + 50) && (top_of_screen < bottom_of_element)) {
+    $("#up-arrow").css("bottom", "calc(var(--footer-height) + 1em)");
+  } else {
+    $("#up-arrow").css("bottom", "");
+  }
+  */
 });
 
 

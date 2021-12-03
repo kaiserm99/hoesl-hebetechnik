@@ -1,22 +1,3 @@
-#up-arrow {
-  position: fixed;
-  width: 4em;
-  height: 4em;
-  bottom: 1em;
-  right: 1em;
-  z-index: 100;
-  cursor: pointer;
-}
 
-#up-arrow img {
-  opacity: 0;
-  width: 100%;
-  transition: opacity 0.4s;
-}
-
-
-#up-arrow img.active {
-  opacity: 1;
-}
 
 

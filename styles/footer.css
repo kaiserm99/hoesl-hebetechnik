@@ -1,0 +1,36 @@
+
+footer {
+  width: 100%;
+  background-color: rgb(226, 226, 226);
+  height: var(--footer-height);
+  color: black;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}
+
+
+a {
+  color: var(--navbar-color);
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 0.125em;
+}
+
+#footer-times-heading {
+  color: var(--navbar-color);
+  margin-bottom: 0.5em;
+}
+
+#footer-adress-heading {
+  color: var(--navbar-color);
+}

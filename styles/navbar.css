@@ -2,6 +2,9 @@
     --navbar-color: #0001a1;
     --logo-color-blue : #0100fc;
     --link-f-color: #f2f2f2;
+    --navbar-height: 7em;
+    --navbar-sticky-color: rgb(22, 22, 22);
+    --footer-height: 8em;
 }
 
 
@@ -17,7 +20,6 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 0.825rem;
-  padding-bottom: 200vh;
   background: rgb(1,0,103);
   background: linear-gradient(275deg, rgba(1,0,103,1) 0%, rgba(1,0,140,1) 70%, rgba(1,0,170,1) 100%);
 }
@@ -34,6 +36,8 @@ body {
   overflow-x: hidden;
   transition: 0.5s;
   z-index: 10;
+  top: 0;
+  height: var(--navbar-height);
 }
 
 
@@ -116,6 +120,29 @@ body {
 
 #logo img {
   
+}
+
+
+#up-arrow {
+  position: fixed;
+  width: 4em;
+  height: 4em;
+  bottom: 1em;
+  right: 1em;
+  z-index: 100;
+  cursor: pointer;
+}
+
+#up-arrow img {
+  position: relative;
+  opacity: 0;
+  width: 100%;
+  transition: 0.4s;
+}
+
+
+#up-arrow img.active {
+  opacity: 1;
 }
 
 @media (max-width:1620px) {

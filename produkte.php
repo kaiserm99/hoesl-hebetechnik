@@ -4,26 +4,99 @@
   ini_set("display_errors", 1);
 ?>
 
-
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<!-- Include all JQuery from the google API website -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <?php  include 'includes/header.php'; ?>
+    <link rel="stylesheet" type="text/css" href="styles/products.css">
 
-		<!-- Include all Stylesheets -->
-		<link rel="stylesheet" type="text/css" href="styles/main.css">
-
-		<!-- TODO: Insert google analytics link for profiling -->
-
-		<!-- Set the Image and the Title of the  -->
-		<link rel="icon" type="image/png" href="img/logo_small.png">
-		<title>Hösl Hebetechnik</title>
+		<title>Hösl Hebetechnik - Produkte</title>
 	</head>
 
+	<body>
 
-	<script src="scripts/test.js"></script>
+    <?php  include 'includes/navbar.php'; ?>
+
+    <div class="main">
+
+      <div class="main-content">
+        <div class="main-element">
+          <a class="main-element-picture" href="scherenhubtische.php"> <img src="img/scherenhubtische.jpeg"> </a>
+          <div class="main-element-text">
+            <a class="main-element-title" href="scherenhubtische.php"> <h1>Scherenhubtische</h1> </a>
+            <h3 class="main-element-description">Diese Art von Produkt gibt es sowohl <a href="scherenhubtische.php">stationär</a> als auch <a href="scherenhubtische.php?fahrbar=true">fahrbar</a>.</h3>
+          </div>
+        </div>
+
+        <div class="main-element">
+          <a class="main-element-picture" href="hebegeräte.php"> <img src="img/hebegeraete.jpeg"> </a>
+          <div class="main-element-text">
+            <a class="main-element-title" href="hebegeräte.php"> <h1>Hebegeräte</h1> </a>
+            <h3 class="main-element-description">Diese Art von Produkt gibt es sowohl <a href="hebegeräte.php">stationär</a> als auch <a href="hebegeräte.php?fahrbar=true">fahrbar</a>.</h3>
+          </div>
+        </div>
+
+        <div class="main-element">
+          <a class="main-element-picture" href=""> <img src="img/tischunterteile.jpeg"> </a>
+          <div class="main-element-text">
+            <a class="main-element-title" href=""> <h1>Tischunterteile</h1> </a>
+            <h3 class="main-element-description">Das ist eine Beschreibung!</h3>
+          </div>
+        </div>
+
+        <div class="main-element">
+          <a class="main-element-picture" href=""> <img src="img/werkstatteinrichtungen.jpeg"> </a>
+          <div class="main-element-text">
+            <a class="main-element-title" href=""> <h1>Werkstatteinrichtungen</h1> </a>
+            <h3 class="main-element-description">Das ist eine Beschreibung!</h3>
+          </div>
+        </div>
+        
+        <div class="main-element">
+          <a class="main-element-picture" href=""> <img src="img/kippgeraete.png"> </a>
+          <div class="main-element-text">
+            <a class="main-element-title" href=""> <h1>Hebe- und Neigegeräte</h1> </a>
+            <h3 class="main-element-description">Das ist eine Beschreibung!</h3>
+          </div>
+        </div>
+
+        <div class="main-element">
+          <a class="main-element-picture" href=""> <img src="img/sondergeraete.jpeg"> </a>
+          <div class="main-element-text">
+            <a class="main-element-title" href=""> <h1>Sondergeräte</h1> </a>
+            <h3 class="main-element-description">Das ist eine Beschreibung!</h3>
+          </div>
+        </div>
+
+        <div class="main-element">
+          <a class="main-element-picture" href=""> <img src="img/bootausruestungen.jpeg"> </a>
+          <div class="main-element-text">
+            <a class="main-element-title" href=""> <h1>Boot Ausrüstung und Zubehör</h1> </a>
+            <h3 class="main-element-description">Das ist eine Beschreibung!</h3>
+          </div>
+        </div>
+
+        <div class="main-element">
+          <a class="main-element-picture" href=""> <img src="img/montagegeraete.jpeg"> </a>
+          <div class="main-element-text">
+            <a class="main-element-title" href=""> <h1>Montagegeräte</h1> </a>
+            <h3 class="main-element-description">Das ist eine Beschreibung!</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <?php  include 'includes/footer.php'; ?>
+
+    </div>
+
+	</body>
+
+  <!-- Button for navbar purposes. Include in every page! -->
+  <div id="up-arrow">
+    <img src="icon/up-arrow.png" alt="">
+  </div>
+  
+	<script src="scripts/navbar.js"></script>
+  <script src="scripts/products.js"></script>
 </html>
